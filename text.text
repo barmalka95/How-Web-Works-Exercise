@@ -1,0 +1,49 @@
+* TODO Part One: Solidify Terminology
+* In your own terms, define the following terms:
+
+* What is HTTP?
+HTTP - Hypertext Transfer Protocol, it is the protocol for communicating between browser and web server
+
+* What is a URL?
+Universal Resources Locators - it is the address for the website or resource, the URL syntax is - protocol(http,https,ftp, etc.), Hostname(google, facebook, etc.), Port(80 for http), Resource, and Query if there is any
+
+* What is DNS?
+Domain Name System, "the phone book for the web", this system converts the name of the site, the Hostname, to the ip address it is attached to
+
+* What is a query string?
+Query will provide the extra information about the website, we will see this shown also in the URL if we search for something in the website, it takes key and value pairs, and it will be separated in the url with & if there different query pairs
+
+* What are two HTTP verbs and how are they different?
+GET and POST - 
+GET will get us information and the request we made wont change nothing, it does not has any side effect on the website so no impact on the server.
+With POST the request we made will effect the website and impact on data in the server
+
+* What is an HTTP request?
+HTTP request is a way to get information from the server
+
+* What is an HTTP response?
+HTTP response it is what we will get back from the request, also depending on the request method we submits, it can include the protocol of the website, the content type, the headers, the body, the response code and much more information
+
+* What is an HTTP header? Give a couple examples of request and response headers you have seen.
+HTTP header is the part where we can see some information about the website, like the content type - if it it text/html or application/json, the Date, the language of the page, the host name and more.
+request headers and response headers
+when we writing Accept : application/json it will change the content type of the website to json, Accept-Language : en , fr;q=o.9 , he, any other language we want, can change the language of the website
+
+* What are the processes that happen when you type “http://somesite.com/some/page.html” into a browser?
+The browser get the protocol, then convert the Hostname to the IP of the server, then it sends a request to get the information we ant or asking for and we will get a response back with the protocol the status code the headers and more, 
+there are multiple requests that happens automatically, it will get the html link and the check for other links it needs to get, like css or javascript and display everything to us.
+
+* Part Two: Practice Tools
+* Using curl, make a GET request to the icanhazdadjoke.com API to find all jokes involving the word “pirate”
+
+curl https://icanhazdadjoke.com/search\?term\=pirate
+What did the pirate say on his 80th birthday? Aye Matey!
+What does a pirate pay for his corn? A buccaneer!
+Why couldn't the kid see the pirate movie? Because it was rated arrr!
+Why are pirates called pirates? Because they arrr!
+Why do pirates not know the alphabet? They always get stuck at "C".
+
+* Use dig to find what the IP address is for icanhazdadjoke.com
+icanhazdadjoke.com.	300	IN	A	104.21.66.15
+icanhazdadjoke.com.	300	IN	A	172.67.198.173
+
